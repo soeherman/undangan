@@ -94,6 +94,9 @@
     });
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        var audio = document.getElementById("musik");
+        audio.pause();
+        audio.currentTime = 0;
         return false;
     });
 
