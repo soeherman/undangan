@@ -19,43 +19,47 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="fa/css/all.css">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <audio controls autoplay id="musik" hidden>
+        <source src="sound1.mp3" type="audio/mpeg">
+      </audio>
     <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5" style="background-color: #656d4a !important;">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="font-secondary text-white mb-n2">Icha <span class="text-primary">&</span> Gatot</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-            <div class="navbar-nav ml-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Depan</a>
-                <a href="#about" class="nav-item nav-link">Biodata</a>
-                <a href="#acara" class="nav-item nav-link">Acara</a>
-            </div>
+    <nav class="navbar fixed-bottom shadow-sm navbar-expand-lg">
+        <div class="container d-flex justify-content-center" style="background-color: #656d4a !important; border-radius: 10px; padding: 10px;">
+            <a href="#home" class="nav-item nav-link text-white h1"><i class="fa fa-home"></i></a>
+            <a href="#about" class="nav-item nav-link text-white h1"><i class="fa fa-book"></i></a>
+            <a href="#event" class="nav-item nav-link text-white h1"><i class="fa-solid fa-heart"></i></a>
+            <a href="#acara" class="nav-item nav-link text-white h1"><i class="fa-regular fa-calendar-days"></i></a> 
+            <a href="#penutup" class="nav-item nav-link text-white h1"><i class="fa-solid fa-hands-clapping"></i></a> 
         </div>
+            
     </nav>
     <!-- Navbar End -->
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5" id="home">
+    <div class="container-fluid p-0 pb-5 buka" id="home" >
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
                     <img class="position-absolute w-100 h-100" src="img1/foto2.jpeg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Icha & Gatot</h1>
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Mohon Doa Restu</h3>
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Undangan Pernikahan</h3>
                             </div>
+                            <h1 class="display-1 font-secondary text-white mt-3 mb-md-4">Icha & Gatot</h1>
+                            
+                            <p>Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir serta mendoakan di acara pernikahan kami.</p>
+                            <a href="#about" class="btn btn-warning" onclick="play()">Buka Undangan</a>
                         </div>
                     </div>
                 </div>
@@ -66,13 +70,13 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-1" id="about">
+    <div class="container-fluid py-1 aos-all" id="about">
         <div class="container py-1">
-            <div class="section-title position-relative text-center">
+            <div class="section-title position-relative text-center aos-item" data-aos="fade-up">
                 <h1 class="font-secondary display-4">Assalamualaikum Wr. Wb.</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+            <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-md-12 p-0 text-center">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <p>"Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri supaya kamu dapat ketenangan hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnya yang demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berpikir."</p>
@@ -86,25 +90,25 @@
 
 
     <!-- Event Start -->
-    <div class="container-fluid py-5" id="event">
+    <div class="container-fluid" id="event">
         <div class="container py-5">
-            <div class="section-title position-relative text-center">
+            <div class="section-title position-relative text-center" data-aos="fade-up">
                 <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Mengundang ke</h6>
                 <h1 class="font-secondary display-4">Pernikahan Kami</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-md-6 text-center">
                     <h5 class="font-weight-normal text-muted mb-3 pb-3">Assalamualaikum warahmatullahi wabarakatuh
                         Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan Acara Pernikahan kami</h5>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-up" data-aos-delay="250">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
                         <img class="rounded-circle mb-4" src="img1/foto4.jpeg" alt="" height="350px" width="300px">
                         <h2 class="mb-1 font-secondary">Clarisya Amalia Sholehah</h2>
-                        <p class="mb-2" style="font-size: 12px;">Putri Bpk. Syamsuri & Ibu Ririn Sumartiya Ningsing</p>
+                        <p class="mb-2" style="font-size: 12px;">Putri Bpk. Syamsuri & Ibu Ririn Sumartiya Ningsih</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -119,7 +123,7 @@
     </div>
     <!-- Event End -->
 
-    <div class="container-fluid text-white py-5 my-3" id="acara" style="margin-top: 90px; background-color: #656d4a !important;">
+    <div class="container-fluid text-white py-5 my-3" id="acara" style="margin-top: 90px; background-color: #656d4a !important;" data-aos="fade-up" data-aos-delay="450">
         <div class="container text-center py-5">
             <div class="position-relative text-center">
                 <h1 class="font-secondary display-3 text-white">Selasa, 01 November 2022</h1>
@@ -134,7 +138,7 @@
         </div>
     </div>
 
-    <div class="container-fluid py-1" id="penutup">
+    <div class="container-fluid py-1" id="penutup" data-aos="fade-up" data-aos-delay="550">
         <div class="container py-1">
             <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
                 <div class="col-md-12 p-0 text-center">
@@ -156,7 +160,7 @@
                 <i class="far fa-heart text-white"></i>
             </div>
             <div class="text-center">
-                <p class="text-white">Bpk. Syamsuri & Ibu Ririn Sumartiya Ningsing <br> Bpk. Suparno & Ibu Masnawiyah</p>
+                <p class="text-white">Bpk. Syamsuri & Ibu Ririn Sumartiya Ningsih <br> Bpk. Suparno & Ibu Masnawiyah</p>
             </div>
         </div>
     </div>
@@ -167,7 +171,7 @@
     <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top mb-5"><i class="fa fa-angle-double-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -178,6 +182,18 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        function play() {
+            var audio = document.getElementById("musik");
+            audio.play();
+        }
+    </script>
+    
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
